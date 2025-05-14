@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Ritm Cardiac -->
+        <TextView
+            android:text="Ritm cardiac (bpm)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/heartRateInput"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/generateHeartRate"
+            android:text="Generează"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/heartRateStatus"
+            android:text="Status: –"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <!-- Pași -->
+        <TextView android:text="Pași" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/stepsInput"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/generateSteps"
+            android:text="Generează"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/stepsStatus"
+            android:text="Status: –"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <!-- Tensiune arterială -->
+        <TextView android:text="Tensiune (S/D mmHg)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/bloodPressureInput"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/generateBloodPressure"
+            android:text="Generează"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/bloodPressureStatus"
+            android:text="Status: –"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <!-- Calorii consumate -->
+        <TextView android:text="Calorii" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/caloriesInput"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/generateCalories"
+            android:text="Generează"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/caloriesStatus"
+            android:text="Status: –"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <!-- Somn (ore) -->
+        <TextView android:text="Somn (ore)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/sleepInput"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/generateSleep"
+            android:text="Generează"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/sleepStatus"
+            android:text="Status: –"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <!-- Temperatură (°C) -->
+        <TextView android:text="Temperatură (°C)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/temperatureInput"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/generateTemperature"
+            android:text="Generează"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/temperatureStatus"
+            android:text="Status: –"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

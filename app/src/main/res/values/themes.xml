@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.SmartBandSimulator" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Tema principală a aplicației, derivată din AppCompat -->
+    <style name="Theme.SmartBandSimulator" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Culori principale -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+        <!-- Fără ActionBar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Temă pentru dialoguri, dacă ai nevoie -->
+    <style name="Theme.SmartBandSimulator.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert"/>
 </resources>
