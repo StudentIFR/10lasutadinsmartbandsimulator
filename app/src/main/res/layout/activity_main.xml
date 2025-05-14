@@ -33,10 +33,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- Grafic Ritm Cardiac -->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/heartRateChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"/>
+
         <View android:layout_width="match_parent" android:layout_height="16dp" />
 
         <!-- Pași -->
-        <TextView android:text="Pași" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Pași"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/stepsInput"
             android:inputType="number"
@@ -59,7 +69,10 @@
         <View android:layout_width="match_parent" android:layout_height="16dp" />
 
         <!-- Tensiune arterială -->
-        <TextView android:text="Tensiune (S/D mmHg)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Tensiune (S/D mmHg)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/bloodPressureInput"
             android:inputType="text"
@@ -82,7 +95,10 @@
         <View android:layout_width="match_parent" android:layout_height="16dp" />
 
         <!-- Calorii consumate -->
-        <TextView android:text="Calorii" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Calorii"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/caloriesInput"
             android:inputType="number"
@@ -105,7 +121,10 @@
         <View android:layout_width="match_parent" android:layout_height="16dp" />
 
         <!-- Somn (ore) -->
-        <TextView android:text="Somn (ore)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Somn (ore)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/sleepInput"
             android:inputType="numberDecimal"
@@ -128,7 +147,10 @@
         <View android:layout_width="match_parent" android:layout_height="16dp" />
 
         <!-- Temperatură (°C) -->
-        <TextView android:text="Temperatură (°C)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Temperatură (°C)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <EditText
             android:id="@+id/temperatureInput"
             android:inputType="numberDecimal"
