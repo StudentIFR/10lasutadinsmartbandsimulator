@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Bara de zile (Luni–Vineri) -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/daysContainer"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </HorizontalScrollView>
+
+        <!-- Cronometru -->
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:padding="8dp"/>
+
+        <!-- Buton Start/Stop -->
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Grafic BPM (placeholder) -->
+        <TextView
+            android:id="@+id/tvBpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BPM: --"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Lista exerciții -->
+        <TextView
+            android:id="@+id/tvExercises"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selectează o zi"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

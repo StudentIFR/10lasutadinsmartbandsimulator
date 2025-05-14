@@ -1,19 +1,8 @@
 // app/build.gradle.kts
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.gradle.jvm.toolchain.JavaLanguageVersion
 
 plugins {
     id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-    id("dagger.hilt.android.plugin")
-}
-
-kotlin {
-    // Folosește toolchain Java 11 pentru Kotlin
-    jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
-    }
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -32,83 +21,53 @@ android {
     }
 
     buildFeatures {
-        compose = true
+        viewBinding = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
-        jvmTarget = "11"
-    }
-
-    sourceSets {
-        getByName("test") {
-            java.srcDir("src/test [unitTest]/java")
-        }
-    }
-
-    packagingOptions {
-        resources {
-            excludes += "META-INF/NOTICE.md"
-            excludes += "META-INF/LICENSE.md"
-            excludes += "META-INF/NOTICE"
-        }
-    }
-
-    testOptions {
-        unitTests.isIncludeAndroidResources = true
-    }
-}
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    // AndroidX și Material
-    implementation("androidx.multidex:multidex:2.0.1")
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.7.0")
+    // Kotlin standard library
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.20")
+
+    // AndroidX Core & AppCompat
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+
+    // Material Design & Layouts
+    implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // Jetpack Compose (dacă încă folosești, altfel poți scoate)
-    implementation("androidx.compose.ui:ui:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.0")
-    implementation("androidx.compose.material3:material3:1.1.0")
-    implementation("androidx.activity:activity-compose:1.7.2")
+    // ViewPager2 & Fragments
+    implementation("androidx.viewpager2:viewpager2:1.1.0-beta01")
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
 
-    // Room (dacă nu-l folosești, îl poți elimina)
-    implementation("androidx.room:room-runtime:2.4.3")
-    implementation("androidx.room:room-ktx:2.4.3")
-    kapt("androidx.room:room-compiler:2.4.3")
+    // Multidex support
+    implementation("androidx.multidex:multidex:2.0.1")
 
-    // Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-
-    // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-
-    // **MPAndroidChart** pentru grafice
+    // MPAndroidChart for graphs
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
-    // Mail (dacă nu-l folosești, îl poți elimina)
-    implementation("com.sun.mail:android-mail:1.6.7")
-    implementation("com.sun.mail:android-activation:1.6.7")
-
-    // Teste
+    // Testing
     testImplementation("junit:junit:4.13.2")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.6.10")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
-    <!-- Tema principală a aplicației, derivată din AppCompat -->
-    <style name="Theme.SmartBandSimulator" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Culori principale -->
+    <!-- Tema principală a aplicației, moștenește MaterialComponents (compatibil AppCompat și MaterialCardView) -->
+    <style name="Theme.SmartBandSimulator" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Culori primare -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
 
-        <!-- Fără ActionBar -->
+        <!-- Culori secundare -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Personalizări UI -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <!-- Fără ActionBar (îl vei adăuga tu, dacă e cazul, cu un Toolbar) -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <!-- Temă pentru dialoguri, dacă ai nevoie -->
-    <style name="Theme.SmartBandSimulator.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+    <style name="Theme.SmartBandSimulator.Dialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
 </resources>
